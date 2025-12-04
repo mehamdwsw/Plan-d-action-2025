@@ -33,7 +33,7 @@ function afficherData(oneItem) {
 afficherData(data);
 function Delete(id){
 data.splice(id,1)
-    afficherData(data)
+afficherData(data)
 }
 
 
@@ -69,10 +69,12 @@ const Search_inpot= document.getElementById('Search_inpot')
 
 Search.addEventListener('click',Search_filter)
 function Search_filter(){
-    
-    console.log(data.filter((Elemen)=>Search_inpot.value=Elemen.firstname));
-    console.log(data.filter((Elemen)=>Search_inpot.value=Elemen.firstname));
-    console.log(data.filter((Elemen)=>Search_inpot.value=Elemen.firstname));
-   
-    
+    if(Search_inpot.value==""){
+        console.log(data);
+        console.log(10);
+        
+    }else{
+    console.log(data.filter((Elemen)=>Search_inpot.value==Elemen.firstname))
+
+    }
 }
